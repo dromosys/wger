@@ -68,8 +68,7 @@ and stable state.
 
 ::
 
- $ sudo apt-get install python3-dev python-virtualenv nodejs nodejs-legacy npm libjpeg8-dev zlib1g-dev git
-
+ $ sudo apt-get install python3.7-dev python-virtualenv nodejs nodejs-legacy npm libjpeg8-dev zlib1g-dev git
 
 Then install the python packages from pypi in the virtualenv::
 
