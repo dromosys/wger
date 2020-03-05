@@ -167,7 +167,7 @@ def gym_new_user_info(request):
     '''
     Shows info about a newly created user
     '''
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         return HttpResponseForbidden()
 
     if not request.session.get('gym.user'):
@@ -187,7 +187,7 @@ def gym_new_user_info_export(request):
     '''
     Exports the info of newly created user
     '''
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         return HttpResponseForbidden()
 
     if not request.session.get('gym.user'):
@@ -227,7 +227,7 @@ def reset_user_password(request, user_pk):
 
     user = get_object_or_404(User, pk=user_pk)
 
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         return HttpResponseForbidden()
 
     if not request.user.has_perm('gym.manage_gyms') \
@@ -254,7 +254,7 @@ def gym_permissions_user_edit(request, user_pk):
     member = get_object_or_404(User, pk=user_pk)
     user = request.user
 
-    if not user.is_authenticated():
+    if not user.is_authenticated:
         return HttpResponseForbidden()
 
     if not user.has_perm('gym.manage_gyms') and not user.has_perm('gym.manage_gym'):
@@ -341,7 +341,7 @@ class GymAddUserView(WgerFormMixin,
         '''
         Only managers for this gym can add new members
         '''
-        if not request.user.is_authenticated():
+        if not request.user.is_authenticated:
             return HttpResponseForbidden()
 
         if not request.user.has_perm('gym.manage_gyms') \
@@ -431,7 +431,7 @@ class GymUpdateView(WgerFormMixin, LoginRequiredMixin, PermissionRequiredMixin, 
         '''
         Only managers for this gym and general managers can edit the gym
         '''
-        if not request.user.is_authenticated():
+        if not request.user.is_authenticated:
             return HttpResponseForbidden()
 
         if request.user.has_perm('gym.manage_gym')\
