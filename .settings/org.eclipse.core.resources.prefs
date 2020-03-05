@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//wger/core/views/misc.py=utf-8
+encoding//wger/core/views/user.py=utf-8
 encoding//wger/emails/__init__.py=utf-8
 encoding//wger/emails/apps.py=utf-8
 encoding//wger/emails/management/commands/send-mass-emails.py=utf-8
@@ -6,4 +8,5 @@ encoding//wger/emails/models.py=utf-8
 encoding//wger/emails/urls.py=utf-8
 encoding//wger/emails/views/gym.py=utf-8
 encoding//wger/settings_global.py=utf-8
+encoding//wger/software/views.py=utf-8
 encoding/settings.py=utf-8

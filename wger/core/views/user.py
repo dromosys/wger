@@ -238,7 +238,7 @@ def registration(request):
         FormClass = RegistrationFormNoCaptcha
 
     # Redirect regular users, in case they reached the registration page
-    if request.user.is_authenticated() and not request.user.userprofile.is_temporary:
+    if request.user.is_authenticated and not request.user.userprofile.is_temporary:
         return HttpResponseRedirect(reverse('core:dashboard'))
 
     if request.method == 'POST':

@@ -8,7 +8,7 @@ django-bower
 django-formtools
 django-recaptcha==1.0.6
 django-sortedm2m
-django==2.2.8
+django==2.2.10
 django_compressor
 django_mobile
 easy-thumbnails
@@ -29,3 +29,4 @@ djangorestframework
 
 # Python3 compatibility
 six
+django_user_agents
