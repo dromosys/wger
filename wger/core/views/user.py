@@ -31,7 +31,8 @@ from django.contrib.auth.mixins import (
     PermissionRequiredMixin
 )
 from django.contrib.auth.models import User
-from django.contrib.auth.views import auth_login as django_loginview
+from django.contrib.auth.views import LoginView as django_loginview
+#from django.contrib.auth.views import login as django_loginview
 from django.urls import reverse
 from django.http import (
     HttpResponseForbidden,
@@ -92,19 +93,18 @@ from wger.weight.models import WeightEntry
 logger = logging.getLogger(__name__)
 
 
-def login(request):
-    '''
-    Small wrapper around the django login view
-    '''
+#def login(request):
+    #'''
+    #Small wrapper around the django login view
+    #'''
 
-    context = {'active_tab': USER_TAB}
-    if request.GET.get('next'):
-        context['next'] = request.GET.get('next')
+    #context = {'active_tab': USER_TAB}
+    #if request.GET.get('next'):
+    #    context['next'] = request.GET.get('next')
 
-    return django_loginview(request,
-                            template_name='user/login.html',
-                            authentication_form=UserLoginForm,
-                            extra_context=context)
+    #return django_loginview.as_view(template_name='users/login.html',authentication_form=UserLoginForm, extra_context=context)
+
+    #return django_loginview(request, template_name='user/login.html', authentication_form=UserLoginForm, extra_context=context)
 
 
 @login_required()

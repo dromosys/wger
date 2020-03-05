@@ -56,11 +56,12 @@ patterns_language = [
         name='add'),
 ]
 
+from django.contrib.auth.views import LoginView
+    
 # sub patterns for user
 patterns_user = [
-    url(r'^login$',
-        user.login,
-        name='login'),
+    url(r'^login/', LoginView.as_view(template_name='user/login.html'), name="login"),
+    #url(r'^login$', user.login, name='login'),
     url(r'^logout$',
         user.logout,
         name='logout'),
