@@ -88,6 +88,7 @@ Then install the python packages from pypi in the virtualenv::
  $ wger create-settings
  $ wger load-fixtures
  $ wger create-or-reset-admin
+ $ python manage.py download-exercise-images
  $ wger create_settings --settings-path wger/settings.py --database db/database.sqlite
  $ wger bootstrap --settings-path /path/to/current/folder/settings.py --no-start-server
  $ python manage.py runserver
